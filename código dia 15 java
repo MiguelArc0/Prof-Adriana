@@ -1,0 +1,62 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class Main {
+    public double Somar_Real(double a, double b){
+        return (a+b);
+    }
+    public void complexos(int a,int b, int c, int d){
+        int r = a + c;
+        int i = b + d;
+        System.out.println("A soma ="+ r+ i + "i");
+
+    }
+
+    public static void main(String args[]){
+        System.out.println("Olá Mundo!");
+        int a = 5;
+        int b = 10;
+        int soma = a + b;
+        System.out.println("Soma= "+ soma);
+        Main result1 = new Main();
+        System.out.println(result1.Somar_Real(2.6,3.5));
+        Main resul2 = new Main();
+        resul2.complexos(5,2,7,-3);
+
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+pública = ser chamada em outros projetos
+package = apenas na janela normal. no mesmo pacote
+
+static = não precisa declarar o objeto para executar
+main = principal
+String[] args -> passar argumentos
+
+
+
+
+
+*/
+/**
+ * Comentário de Documentação!
+ */
