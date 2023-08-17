@@ -1,0 +1,108 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+// ex18();
+//ex19();
+//ex20();
+//ex21();
+//ex23();
+
+
+
+
+    }
+    static void ex18(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ano atual: ");
+        
+        int ano_atual = sc.nextInt();
+        
+        System.out.println("Ano de nascimento: ");
+        int ano_nascimento = sc.nextInt();
+        
+        int situacao = ano_atual - ano_nascimento;
+        
+        if (situacao > 18 && situacao < 60) {
+            System.out.println("Você é obrigado a votar!");
+        } else if (situacao > 16 && (situacao >= 60 || situacao < 18)) {
+            System.out.println("Não tem obrigação legal de votar!");
+        }
+        else if(situacao < 16){
+            System.out.println("Não pode votar! pois tem " + situacao + " anos");
+        }        
+    }
+    static void ex19(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Primeiro valor: ");
+        
+        int val1 = sc.nextInt();
+        
+        System.out.println("Segundo valor: ");
+        int val2 = sc.nextInt();
+        
+        if (val1 < val2){
+            System.out.println("O segundo valor é o maior: " + val2);
+        }
+        else if (val1 > val2){
+            System.out.println("O primeiro valor é o maior: " + val1);
+        }
+        else{
+            System.out.println("É tudo mentira, são iguais.");
+        }
+        
+    }
+    static void ex20(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Primeiro valor: ");
+        
+        int val1 = sc.nextInt();
+        
+        System.out.println("Segundo valor: ");
+        int val2 = sc.nextInt();
+        
+        if (val1 < val2){
+            System.out.println("Em ordem crescente: " + val1 + " e : " + val2);
+        }
+        else if(val1 > val2){
+            System.out.println("Em ordem crescente: " + val2 + " e " + val1);
+        }
+        
+    }
+    static void ex22(){
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Quantas horas trabalhadas: ");
+        
+        int horas = sc.nextInt();
+        
+        System.out.println("Qual o valor do salário: ");
+        int val_sal = sc.nextInt();
+        
+        
+        System.out.println("Qual o valor da hora do seu salário: ");
+        int val_sal_hora = sc.nextInt();
+        int hora_extra = 0;
+        double val_hora_extra = 0.0; 
+        if (horas > 160){
+            hora_extra = horas - 160;
+            val_hora_extra = (double)(((val_sal_hora * 0.5 + val_sal_hora) * hora_extra) + val_sal);
+        }
+        System.out.println("Valor do salário com hora extra: " + val_hora_extra);
+        
+    }
+    
+    static void ex23(){
+        
+        char sexo;
+        
+        Scanner sc = new Scanner(System.in);
+        do{
+            System.out.println("Escolha o sexo: (M|F) ");
+            sexo = sc.nextLine().charAt(0);
+        } while(sexo != 'M' && sexo != 'F');
+    
+    
+    
+    
+    
