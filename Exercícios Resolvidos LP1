@@ -143,9 +143,62 @@ ex24();
         
         
     }
-    
-    
-    
+
+    static void ex27() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Informe o valor: ");
+        int valor = sc.nextInt();
+        sc.close();
+        if (valor > 0) {
+            System.out.println("O valor é positivo: " + valor);
+        } else if (valor == 0) {
+            System.out.println("O valor é: 0");
+        } else if (valor < 0) {
+            System.out.println("O valor é negativo: " + valor);
+        }
+    }
+
+    static void ex28() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Informe o valor: ");
+        int valor = sc.nextInt();
+        System.out.println("Informe o valor: ");
+        int valor1 = sc.nextInt();
+        System.out.println("Informe o valor: ");
+        int valor2 = sc.nextInt();
+        sc.close();
+        if (valor > valor1 && valor > valor2) {
+            System.out.println("O valor 1° é o maior: " + valor);
+        } else if (valor1 > valor && valor1 > valor2) {
+            System.out.println("O valor 2° é o maior: " + valor1);
+        } else if (valor2 > valor1 && valor2 > valor1) {
+            System.out.println("O valor 3° é o maior: " + valor2);
+        }
+    }
+
+    static void ex29() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Informe o valor: ");
+        int valor = sc.nextInt();
+        System.out.println("Informe o valor: ");
+        int valor1 = sc.nextInt();
+        System.out.println("Informe o valor: ");
+        int valor2 = sc.nextInt();
+        sc.close();
+
+        if (valor > valor1 && valor > valor2 && valor1 > valor2) {
+            System.out.println("O Maior valor: " + valor + "\nO segundo maior valor: " + valor1);
+        } else if (valor1 > valor && valor > valor2 && valor1 > valor2) {
+            System.out.println("O Maior valor: " + valor1 + "\nO segundo maior valor: " + valor);
+        } else if (valor > valor1 && valor2 > valor1 && valor > valor2) {
+            System.out.println("O Maior valor: " + valor + "\nO segundo maior valor: " + valor2);
+        }
+        else if (valor > valor1 && valor2 > valor1 && valor > valor2) {
+            System.out.println("O Maior valor: " + valor + "\nO segundo maior valor: " + valor2);
+        }
+    }
+}
+
     
     
     
