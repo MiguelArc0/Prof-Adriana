@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.Arrays;
+import java.util.ArrayList;
 
 class Main {
     public static void main(String[] args) {
@@ -197,8 +199,8 @@ ex24();
             System.out.println("O Maior valor: " + valor + "\nO segundo maior valor: " + valor2);
         }
     }
-}
-static void ex35(){
+
+    static void ex35(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Informe a quantidade de litros de Álcool: ");
         int qtd_alcool = sc.nextInt();
@@ -208,24 +210,39 @@ static void ex35(){
 
         double preco_gasolina = 3.30;
         double preco_alcool = 2.90;
+        double ini_conta_gasolina = qtd_gasolina * preco_gasolina;
+        double ini_conta_alcool = qtd_alcool * preco_alcool;
+        double conta_gasolina;
+        double conta_alcool;
 
-        double conta_gasolina ;
-        double conta_alcool ;
+        if (qtd_gasolina < 20) {
+            conta_gasolina = qtd_gasolina * (preco_gasolina - (preco_gasolina * 0.03));
+            System.out.println("-------GASOLINA-------");
+            System.out.printf("Preço sem descontos da Gasolina: %.2f R$%n", ini_conta_gasolina);
+            System.out.printf("Desconto de 3%%: %.2f R$%n", conta_gasolina);
+        } else {
+            conta_gasolina = qtd_gasolina * (preco_gasolina - (preco_gasolina * 0.05));
+            System.out.println("-------GASOLINA-------");
+            System.out.printf("Preço sem descontos da Gasolina: %.2f R$%n", ini_conta_gasolina);
+            System.out.printf("Desconto de 5%%: %.2f R$%n", conta_gasolina);
+        }
 
-        if (qtd_gasolina<20){
-            conta_gasolina = (qtd_gasolina * preco_gasolina) - ((qtd_gasolina * preco_gasolina) * 0.03);
+        if (qtd_alcool < 20) {
+            conta_alcool = qtd_alcool * (preco_alcool - (preco_alcool * 0.04));
+            System.out.println("-------ÁLCOOL-------");
+            System.out.printf("Preço sem descontos do Álcool: %.2f R$%n", ini_conta_alcool);
+            System.out.printf("Desconto de 4%%: %.2f R$%n", conta_alcool);
+        } else {
+            conta_alcool = qtd_alcool * (preco_alcool - (preco_alcool * 0.06));
+            System.out.println("-------ÁLCOOL-------");
+            System.out.printf("Preço sem descontos do Álcool: %.2f R$%n", ini_conta_alcool);
+            System.out.printf("Desconto de 6%%: %.2f R$%n", conta_alcool);
         }
-        else if(qtd_gasolina >= 20){
-            conta_gasolina = (qtd_gasolina * preco_gasolina) - ((qtd_gasolina * preco_gasolina) * 0.05);
-        }
-        if (qtd_alcool<20){
-            conta_gasolina = (qtd_alcool * preco_alcool) - ((qtd_alcool * preco_alcool) * 0.04);
-        }
-        else if(qtd_gasolina >= 20){
-            conta_gasolina = (qtd_alcool * preco_alcool) - ((qtd_alcool * preco_alcool) * 0.06);
-        }
-    }
-    
+
+
+
+
+    }    
     
     
     
