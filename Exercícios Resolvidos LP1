@@ -198,7 +198,33 @@ ex24();
         }
     }
 }
+static void ex35(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Informe a quantidade de litros de Álcool: ");
+        int qtd_alcool = sc.nextInt();
 
+        System.out.println("Informe a quantidade de litros de Gasolina: ");
+        int qtd_gasolina = sc.nextInt();
+
+        double preco_gasolina = 3.30;
+        double preco_alcool = 2.90;
+
+        double conta_gasolina ;
+        double conta_alcool ;
+
+        if (qtd_gasolina<20){
+            conta_gasolina = (qtd_gasolina * preco_gasolina) - ((qtd_gasolina * preco_gasolina) * 0.03);
+        }
+        else if(qtd_gasolina >= 20){
+            conta_gasolina = (qtd_gasolina * preco_gasolina) - ((qtd_gasolina * preco_gasolina) * 0.05);
+        }
+        if (qtd_alcool<20){
+            conta_gasolina = (qtd_alcool * preco_alcool) - ((qtd_alcool * preco_alcool) * 0.04);
+        }
+        else if(qtd_gasolina >= 20){
+            conta_gasolina = (qtd_alcool * preco_alcool) - ((qtd_alcool * preco_alcool) * 0.06);
+        }
+    }
     
     
     
