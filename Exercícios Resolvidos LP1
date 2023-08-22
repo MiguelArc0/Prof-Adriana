@@ -279,7 +279,28 @@ ex24();
     
     
     
-    
+        static void ex85() {
+        Scanner sc = new Scanner(System.in);
+
+        int[] temp = new int[5];
+
+        for (int i = 0; i < temp.length; i++) {
+            System.out.println("Insira as temperaturas: ");
+            temp[i] = sc.nextInt();
+
+        }
+        int maior_temp = temp[0];
+        for(int i = 0; i < temp.length; i++){
+            if (maior_temp < temp[i]){
+                maior_temp = temp[i];
+            }
+        }
+        System.out.println("Maior valor: " + maior_temp);
+
+
+    }
+
+
     
 
 
