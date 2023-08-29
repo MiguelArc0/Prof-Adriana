@@ -293,6 +293,73 @@ ex24();
     }
 
 
+    static void ex72(){
+
+        int[] notas = new int[15];
+        Scanner sc = new Scanner(System.in);
+        double arma_media = 0;
+        double media = 0;
+        for(int i = 0; i < notas.length; i ++ ){
+            System.out.println("Insira os números: ");
+            notas[i] = sc.nextInt();
+            arma_media += notas[i];
+        }
+        media = arma_media / notas.length;
+        int maior = notas[0];
+        for(int i = 0; i < notas.length; i ++ ){
+            if(maior < notas[i]){
+                maior = notas[i];
+            }
+        }
+        System.out.println("A média das notas: " + media);
+        System.out.println("A maior das notas: " + maior);
+
+
+    }
+
+    static void ex73() {
+        double[] pessoa_Sal = new double[3];
+        double[] pessoa_Filhos = new double[3];
+        Scanner sc = new Scanner(System.in);
+        double num_pessoas = 0;
+        double ac_Sal = 0;
+        double ac_filho = 0;
+        double media_Sal = 0;
+        double media_filho = 0;
+        double maior_cento = 0;
+
+        for (int i = 0; i < pessoa_Sal.length; i++) {
+            System.out.println("Insira seu salario: ");
+            pessoa_Sal[i] = sc.nextDouble();
+            if(pessoa_Sal[i] > 150)
+                {
+                maior_cento += 1;
+                }
+            System.out.println("Insira o número de filhos: ");
+            pessoa_Filhos[i] = sc.nextDouble();
+
+            num_pessoas = pessoa_Filhos.length;
+            ac_Sal += pessoa_Sal[i];
+
+            ac_filho += pessoa_Filhos[i];
+        }
+        media_Sal = ac_Sal / num_pessoas;
+        media_filho = ac_filho / num_pessoas;
+
+        System.out.println("A média do salário das pessoas: " + media_Sal);
+        System.out.println("A média de filho por pessoa: " + media_filho);
+
+
+        double maior_sal = pessoa_Filhos[0];
+        for(int i = 0; i < pessoa_Sal.length; i ++ ){
+            if( maior_sal < pessoa_Sal[i]){
+                maior_sal = pessoa_Sal[i];
+            }
+        }
+            System.out.println("O maior salário: " + maior_sal);
+
+    }
+
    
       
         static void ex84(){
