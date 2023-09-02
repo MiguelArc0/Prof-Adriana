@@ -36,8 +36,85 @@ static void ex2A()
 
 <br>
 <h2>Exercício 2 - B</h2>
+    static void ex2B()
+    
+    {
+
+        
+        int a = 30;
+        int b = 20;
+        int c = a + b;
+        System.out.println("Valor de C: " + c);
+        b = 10;
+        System.out.println("Valor de B: " + b + "\nValor de C: " + c);
+        c = a + b;
+        System.out.println("\nValor de A: " + a +"Valor de B: " + b + "\nValor de C: " + c);
+    }
+<img src ="/AssetsTeste/Ex3.png">
+
+<br>
+<h2>Exercício 2 - C </h2>
+static void ex2C()
+
+{
 
 
+        int a = 10;
+        int b = 20;
+        int c = a;
+        b = c;
+        a = b;
+        System.out.println("\nValor de A: " + a +"Valor de B: " + b + "\nValor de C: " + c);
+    }
+<img src = "/AssetsTeste/Ex4.png">
+<br>
+<h2>Exercício 2 - D</h2>
+
+static void ex2D()
+{
+
+        
+        int a = 10;
+        int b = a + 1;
+        a = b + 1;
+        b = a + 1;
+        System.out.println("Valor de A: " + a);
+        a = b + 1;
+        System.out.println("\nValor de A: " + a +"Valor de B: " + b);
+    }
+<img src = "/AssetsTeste/Ex5.png">
+
+<br>
+<h2>Exercício 2 - E</h2>
+
+static void ex2E()
+{
+
+        
+        int a = 10;
+        int b = 5;
+        int c = a + b;
+        b = 20;
+        a = 10;
+        System.out.println("\nValor de A: " + a +"Valor de B: " + b);
+    }
+<img src = "/AssetsTeste/Ex6.png">
+
+<br>
+<h2>Exercício 2 - F</h2>
+static void ex2F()
+{
+
+        
+        int x = 1;
+        int y = 1;
+        int z = x + y;
+        System.out.println("Valor de Z: " + z);
+        x = 5;
+        y = x + z;
+        System.out.println("\nValor de X: " + x +"Valor de Y: " + y + "Valor de Z: " + z);
+    }
+<img src = "/AssetsTeste/Ex7.png">
 <br>
 <h2>Exercício 5</h2>
 
