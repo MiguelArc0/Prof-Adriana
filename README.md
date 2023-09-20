@@ -176,15 +176,15 @@ static void ex79ArraySimples(){
 
         int[] notas = new int[5];
         Scanner sc = new Scanner(System.in);
-        double arma_media = 0;
+        double armaz_nota = 0;
         double media = 0;
         int maior_que_A_media = 0;
         for(int i = 0; i < notas.length; i ++ ){
             System.out.println("Insira os números: ");
             notas[i] = sc.nextInt();
-            arma_media += notas[i];
+            armaz_nota += notas[i];
         }
-        media = arma_media / notas.length;
+        media = armaz_nota / notas.length;
         for(int i = 0; i < notas.length; i ++ ){
             if(notas[i] > media){
                 maior_que_A_media += 1;
