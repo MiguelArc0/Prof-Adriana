@@ -168,3 +168,92 @@ public static void ex7() {
 
     }
 <img src="/AssetsTeste/Ex10.png">  
+
+# Exercícios de ArraySimples e ArrayList Prof Adriana
+
+static void ex79ArraySimples(){
+
+
+        int[] notas = new int[5];
+        Scanner sc = new Scanner(System.in);
+        double arma_media = 0;
+        double media = 0;
+        int maior_que_A_media = 0;
+        for(int i = 0; i < notas.length; i ++ ){
+            System.out.println("Insira os números: ");
+            notas[i] = sc.nextInt();
+            arma_media += notas[i];
+        }
+        media = arma_media / notas.length;
+        for(int i = 0; i < notas.length; i ++ ){
+            if(notas[i] > media){
+                maior_que_A_media += 1;
+            }
+        }
+        System.out.println("A média das notas dos alunos: " + media);
+        System.out.println("Vezes em que a nota de algum aluno foi maior que a média: " + maior_que_A_media);
+    }
+
+<img src="/AssetsTeste/aula01.png">  
+<br>
+static void ex82ArraySimples(){
+
+
+        int[] notasV = new int[5];
+        int[] notasM = new int[5];
+        Scanner sc = new Scanner(System.in);
+
+        for(int i = 0; i < notasV.length; i ++ ) {
+            System.out.println("Insira os números: ");
+            notasV[i] = sc.nextInt();
+        }
+        System.out.println("Insira mais um número: ");
+        int maisum = sc.nextInt();
+
+        for(int i = 0; i < notasM.length; i++){
+            notasM[i] = notasV[i] * maisum;
+        }
+        System.out.println("O Array Original: " + Arrays.toString(notasV));
+        System.out.println("O Array Multiplicado: " + Arrays.toString(notasM));
+
+    }
+<img src="/AssetsTeste/aula02.png">  
+
+
+<br>
+
+static void ex84() {
+
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = 0;
+        System.out.println("Insira o valor de N: ");
+        n = sc.nextInt();
+
+        int[] Aba = new int[n];
+        int[] Bab = new int[n];
+        int[] Soma = new int[n];
+
+        for (int i = 0; i < Aba.length; i++) {
+            System.out.println("Insira os valores do vetor A: ");
+            Aba[i] = sc.nextInt();
+
+            System.out.println("Insira os valores do vetor B: ");
+            Bab[i] = sc.nextInt();
+        }
+        
+        for (int i = 0; i < Aba.length; i++) {
+            Soma[i] = Aba[i] + Bab[i];
+        }
+
+        System.out.println("O vetor A: " + Arrays.toString(Aba));
+        System.out.println("O vetor B: " + Arrays.toString(Bab));
+        System.out.println("O vetor das somas de A e B: " + Arrays.toString(Soma));
+
+
+    }
+
+<img src="/AssetsTeste/aula03.png">  
+
+
