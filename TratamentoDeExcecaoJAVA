@@ -2,9 +2,9 @@ import java.util.ArrayList;
 
 public class teste {
     public static void main(String[] args) {
-        System.out.println("Olá");
+    tratamentoExcecao();
     }
-    public void tratamentoExcecao(){
+    public static void tratamentoExcecao(){
         ArrayList<String> carros = new ArrayList<>();
 
         carros.add("Corola");
@@ -16,6 +16,9 @@ public class teste {
             System.out.println(carros.get(10));
         }catch(IndexOutOfBoundsException e){
             System.out.println("Erro: Valor fora do índice");
+            System.out.println("Como está fora do índice, irei lhe mostrar o carro na posição 3 do Array");
+            System.out.print("Carro: ");
+            System.out.println(carros.get(3));
         }
 
     }
