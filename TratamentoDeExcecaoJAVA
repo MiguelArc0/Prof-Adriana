@@ -1,1 +1,22 @@
+import java.util.ArrayList;
 
+public class teste {
+    public static void main(String[] args) {
+        System.out.println("Olá");
+    }
+    public void tratamentoExcecao(){
+        ArrayList<String> carros = new ArrayList<>();
+
+        carros.add("Corola");
+        carros.add("Nissan");
+        carros.add("Toyota");
+        carros.add("Mitsubishi");
+
+        try{
+            System.out.println(carros.get(10));
+        }catch(IndexOutOfBoundsException e){
+            System.out.println("Erro: Valor fora do índice");
+        }
+
+    }
+}
