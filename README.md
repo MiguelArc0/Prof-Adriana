@@ -173,6 +173,46 @@ public static void ex7() {
 <img src="/AssetsTeste/Ex10.png">  
 
 # Exercícios de ArraySimples e ArrayList Prof Adriana
+77
+        
+        static void ex77()
+        {
+        int[] exV = {5,1,4,2,7,8,3,6};
+        for (int i = 8;i >= 5; i --){
+            int aux = exV[i];
+            exV[i] = exV[7-i + 1];
+            exV[7-i + 1] = aux;
+        }
+        exV[2] = exV[1];
+        exV[exV[2]] = exV[exV[1]];
+
+        System.out.println(Arrays.toString(exV));
+    }
+
+    
+<img src="/AssetsTeste/ex77.png"> 
+<br>
+    
+78
+    
+    static void ex78Vetor(){
+        Scanner sc = new Scanner(System.in);
+        ArrayList<String> pessoas = new ArrayList<>();
+        for(int i = 0;i < 5 ;i++){
+            System.out.println("Insira o nome da pessoa "+ (i+1)+"º");
+            pessoas.add (sc.next());
+        }
+        System.out.println("Insira mais um nome: ");
+        String nome = sc.next();
+        pessoas.add(nome);
+        for(int i = 0;i < 5 ;i++){
+            if(nome.equals(pessoas.get(i))){
+                System.out.println("O nome na posição: " + (i+1) + " = "+pessoas.get(i)+" é igual ao nome fornecido, o nome é: " + nome);
+            }
+        }
+    }
+    
+<img src="/AssetsTeste/ex78.png"> 
 
 static void ex79ArraySimples(){
 
@@ -199,6 +239,75 @@ static void ex79ArraySimples(){
 
 <img src="/AssetsTeste/aula01.png">  
 <br>
+80
+
+        static void ex80ArraySimples(){
+        int[] notas = new int[5];
+        Scanner sc = new Scanner(System.in);
+        double arma_media = 0;
+        double media = 0;
+        for(int i = 0; i < notas.length; i ++ ){
+            System.out.println("Insira os números: ");
+            notas[i] = sc.nextInt();
+            arma_media += notas[i];
+        }
+        media = arma_media / notas.length;
+        int maior = notas[0];
+        int pos = 0;
+        for(int i = 0; i < notas.length; i ++ ){
+            if(maior < notas[i]){
+                maior = notas[i];
+                pos = (i+1);
+            }
+            else{
+                pos = (i+1);
+            }
+        }
+        System.out.println("O Aarray: " + Arrays.toString(notas));
+        System.out.println("A média das notas: " + media);
+        System.out.println("A maior das notas: " + maior);
+        System.out.println("A posição do Maior é o número " + pos +" na lista");
+
+
+    }
+
+<img src="/AssetsTeste/ex80.png">     
+<br>
+81
+
+                static void ex81ArraySimples(){
+        int[] notas = new int[5];
+        Scanner sc = new Scanner(System.in);
+        double arma_media = 0;
+        double media = 0;
+        for(int i = 0; i < notas.length; i ++ ){
+            System.out.println("Insira os números: ");
+            notas[i] = sc.nextInt();
+            arma_media += notas[i];
+        }
+        media = arma_media / notas.length;
+        int menor = notas[0];
+        int pos = 1;
+        for(int i = 0; i < notas.length; i ++ ){
+            if(menor > notas[i]){
+                menor = notas[i];
+                pos = (i+1);
+            }
+            else{
+                pos = (i+1);
+            }
+        }
+        System.out.println("O Array: " + Arrays.toString(notas));
+        System.out.println("A média das notas: " + media);
+        System.out.println("A menor das notas: " + menor);
+        System.out.println("A posição do Maior é o número " + pos +" na lista");
+
+
+    }
+
+
+<img src="/AssetsTeste/ex81.png">     
+<br>
 static void ex82ArraySimples(){
 
 
@@ -223,6 +332,31 @@ static void ex82ArraySimples(){
 <img src="/AssetsTeste/aula02.png">  
 
 
+<br>
+83
+
+        static void ex83ArraySimples(){
+        int[] notas = new int[5];
+        Scanner sc = new Scanner(System.in);
+        for(int i = 0; i < notas.length; i ++ ) {
+            System.out.println("Insira os números: ");
+            notas[i] = sc.nextInt();
+        }
+        for(int i = 1; i < notas.length; i ++ ) {
+            System.out.println("Da primeira até a ultima: " + i);
+        }
+
+        System.out.println("----------------------");
+
+        for(int i = 1; i < notas.length; i ++ ) {
+            System.out.println("Da última até o começo: " + notas[notas.length - i]);
+        }
+        System.out.println("Da última até o começo: " + notas[0]);
+        System.out.println("O Array: " + Arrays.toString(notas));
+
+    }
+
+<img src="/AssetsTeste/ex83.png">    
 <br>
 
 static void ex84() {
@@ -258,5 +392,205 @@ static void ex84() {
     }
 
 <img src="/AssetsTeste/aula03.png">  
+<br>
+85
+
+        public class Exercicio85ArraySimples {
+        public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[] temperaturas = new int[365];
+        
+        // Leitura das temperaturas médias diárias
+        for (int i = 0; i < temperaturas.length; i++) {
+            System.out.println("Insira a temperatura média do dia " + (i + 1) + ": ");
+            temperaturas[i] = sc.nextInt();
+        }
+
+        // Encontrar a menor e a maior temperatura do ano
+        int menorTemp = temperaturas[0];
+        int maiorTemp = temperaturas[0];
+        int somaTemps = 0;
+
+        for (int temp : temperaturas) {
+            if (temp < menorTemp) {
+                menorTemp = temp;
+            }
+
+            if (temp > maiorTemp) {
+                maiorTemp = temp;
+            }
+
+            somaTemps += temp;
+        }
+
+        // Calcular a temperatura média anual
+        double mediaAnual = (double) somaTemps / temperaturas.length;
+
+        // Contar o número de dias com temperatura inferior à média anual
+        int diasAbaixoMedia = 0;
+
+        for (int temp : temperaturas) {
+            if (temp < mediaAnual) {
+                diasAbaixoMedia++;
+            }
+        }
+
+        // Exibir os resultados
+        System.out.println("Menor temperatura do ano: " + menorTemp);
+        System.out.println("Maior temperatura do ano: " + maiorTemp);
+        System.out.println("Temperatura média anual: " + mediaAnual);
+        System.out.println("Número de dias com temperatura abaixo da média anual: " + diasAbaixoMedia);
+            }
+        }
+<img src="/AssetsTeste/ex85.png"> 
+<br>
+86
+
+            static void ex86ArraySimples(){
+        Scanner sc = new Scanner(System.in);
+        int[] vetorD = new int[9];
+        for(int i = 0;i< vetorD.length;i++){
+            System.out.println("Insira os valores desordenados: ");
+            vetorD[i] = sc.nextInt();
+        }
+        System.out.println("O Array desordenado: " + Arrays.toString(vetorD));
+        for(int i = 0;i< vetorD.length;i++){
+            for(int j = i + 1;j< vetorD.length;j++){
+                if(vetorD[i] > vetorD[j]){
+                    int temporario = vetorD[i];
+                    vetorD[i] = vetorD[j];
+                    vetorD[j] = temporario;
+                }
+            }
+        }
+        System.out.println("O Array ordenado: " + Arrays.toString(vetorD));
+    }
+<img src="/AssetsTeste/ex86.png"> 
+<br>
+87
+
+        public static void ex87ArrayNormal() {
+        Scanner sc = new Scanner(System.in);
+
+        int[] vetor = new int[11];
+        int novoNumero;
+        
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Insira um número: ");
+            vetor[i] = sc.nextInt();
+        }
+
+        System.out.println("Insira mais um número: ");
+        novoNumero = sc.nextInt();
+        
+        int posicaoInsercao = 0;
+        while (posicaoInsercao < 10 && novoNumero > vetor[posicaoInsercao]) {
+            posicaoInsercao++;
+        }
+        
+        for (int i = 10; i > posicaoInsercao; i--) {
+            vetor[i] = vetor[i - 1];
+        }
+        
+        vetor[posicaoInsercao] = novoNumero;
+        
+        System.out.println("Vetor com o novo número inserido e ordenado: " + Arrays.toString(vetor));
+    }
+<img src="/AssetsTeste/ex87.png"> 
+<br>
+88
+
+        static void ex88ArraySimples(){
+        int[] notas = new int[5];
+        Scanner sc = new Scanner(System.in);
+        for(int i = 0; i < notas.length; i ++ ) {
+            System.out.println("Insira os números: ");
+            notas[i] = sc.nextInt();
+        }
+        boolean existe = false;
+        System.out.println("Insira mais um número: ");
+        int maisum = sc.nextInt();
+        for(int i = 0; i < notas.length; i ++ ) {
+            if (maisum == notas[i]){
+                existe = true;
+            }
+        }
+<img src="/AssetsTeste/ex88.png"> 
+<br>
+89
+
+        static void ex89(){
+        int[] V1 = new int[5];
+        int[] V2 = new int[5];
+
+        int qtd_Vezes = 0;
+        int msm_pos = 0;
+        Scanner sc = new Scanner(System.in);
+        for(int i = 0; i < V1.length; i ++ ) {
+            System.out.println("Insira os números: ");
+            V1[i] = sc.nextInt();
+        }
+        for(int i = 0; i < V1.length; i ++ ) {
+            System.out.println("Insira os números VETOR 2: ");
+            V2[i] = sc.nextInt();
+        }
+        for(int i = 0; i < V1.length; i ++ ) {
+            if(V1[i] == V2[i]){
+                qtd_Vezes += 1;
+            }
+
+        }
+        System.out.println(Arrays.toString(V1));
+        System.out.println(Arrays.toString(V2));
+        System.out.println("Qtd vezes iguais em que é o mesmo número e na mesma posição: " + qtd_Vezes);
 
 
+    }
+<img src="/AssetsTeste/ex89.png"> 
+<br>
+90
+
+       static void ex90ArraySimples() {
+        int[] notas = new int[5];
+        Scanner sc = new Scanner(System.in);
+        for (int i = 0; i < notas.length; i++) {
+            System.out.println("Insira os números: ");
+            notas[i] = sc.nextInt();
+        }
+        int existe = 0;
+        System.out.println("Insira mais um número: ");
+        int maisum = sc.nextInt();
+        for (int i = 0; i < notas.length; i++) {
+            if (maisum == notas[i]) {
+                existe += 1;
+            }
+        }
+
+        System.out.println("A quantidade de vezes em que o número digitado aparece no array é: " + existe);
+    }  
+<img src="/AssetsTeste/ex90.png"> 
+<br>
+91
+
+        static void ex91ArraySimples() {
+        int[] notas = new int[5];
+        Scanner sc = new Scanner(System.in);
+        for (int i = 0; i < notas.length; i++) {
+            System.out.println("Insira os números: ");
+            notas[i] = sc.nextInt();
+        }
+        int mesmo = 0;
+        for (int i = 0; i < notas.length; i++) {
+            for(int j = i + 1; j < notas.length; j++){
+                if(notas[i] == notas[j]){
+                    mesmo += 1;
+                    System.out.println("O número: " + notas[i] + " está repetido na posição: " + (i+1) + " e na posição: " + (j+1));
+                }
+            }
+        }
+    }
+<img src="/AssetsTeste/ex91.png"> 
+<br>
+<br>
+Fim
